@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗапустить" id="1">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Запустить</CommandName>
+				<ExtendedTooltip name="ФормаЗапуститьРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<ButtonGroup name="ФормаГруппаНастройки" id="52">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Форма группа настройки</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Форма группа настройки</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="ФормаГруппаНастройкиРасширеннаяПодсказка" id="53"/>
+				<ChildItems>
+					<Button name="ФормаСохранитьНастройки" id="56">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.СохранитьНастройки</CommandName>
+						<ExtendedTooltip name="ФормаСохранитьНастройкиРасширеннаяПодсказка" id="57"/>
+					</Button>
+					<Button name="ФормаЗагрузитьНастройки" id="54">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЗагрузитьНастройки</CommandName>
+						<ExtendedTooltip name="ФормаЗагрузитьНастройкиРасширеннаяПодсказка" id="55"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаПериод" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа период</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа период</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПериодРасширеннаяПодсказка" id="4"/>
+			<ChildItems>
+				<InputField name="ПериодНачало" id="5">
+					<DataPath>Объект.ПериодНачало</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период с</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПериодНачалоКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="ПериодНачалоРасширеннаяПодсказка" id="7"/>
+				</InputField>
+				<InputField name="ПериодОкончание" id="8">
+					<DataPath>Объект.ПериодОкончание</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>по</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПериодОкончаниеКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="ПериодОкончаниеРасширеннаяПодсказка" id="10"/>
+				</InputField>
+				<Button name="УстановитьПериод" id="11">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.УстановитьПериод</CommandName>
+					<ExtendedTooltip name="УстановитьПериодРасширеннаяПодсказка" id="12"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаРежим" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа режим</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаРежимРасширеннаяПодсказка" id="17"/>
+			<ChildItems>
+				<CheckBoxField name="ПерепроводитьДокументы" id="18">
+					<DataPath>Объект.ПерепроводитьДокументы</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПерепроводитьДокументыКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="ПерепроводитьДокументыРасширеннаяПодсказка" id="20"/>
+				</CheckBoxField>
+				<CheckBoxField name="ВыгружатьДвижения" id="21">
+					<DataPath>Объект.ВыгружатьДвижения</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВыгружатьДвиженияКонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="ВыгружатьДвиженияРасширеннаяПодсказка" id="23"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="КаталогВыгрузки" id="13">
+			<DataPath>Объект.КаталогВыгрузки</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ChoiceButton>true</ChoiceButton>
+			<ContextMenu name="КаталогВыгрузкиКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="КаталогВыгрузкиРасширеннаяПодсказка" id="15"/>
+			<Events>
+				<Event name="StartChoice">КаталогВыгрузкиНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<Table name="Запросы" id="24">
+			<HeightInTableRows>3</HeightInTableRows>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Запросы</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ЗапросыКонтекстноеМеню" id="25"/>
+			<AutoCommandBar name="ЗапросыКоманднаяПанель" id="26"/>
+			<ExtendedTooltip name="ЗапросыРасширеннаяПодсказка" id="27"/>
+			<SearchStringAddition name="ЗапросыСтрокаПоиска" id="28">
+				<AdditionSource>
+					<Item>Запросы</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗапросыСтрокаПоискаКонтекстноеМеню" id="29"/>
+				<ExtendedTooltip name="ЗапросыСтрокаПоискаРасширеннаяПодсказка" id="30"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ЗапросыСостояниеПросмотра" id="31">
+				<AdditionSource>
+					<Item>Запросы</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗапросыСостояниеПросмотраКонтекстноеМеню" id="32"/>
+				<ExtendedTooltip name="ЗапросыСостояниеПросмотраРасширеннаяПодсказка" id="33"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ЗапросыУправлениеПоиском" id="34">
+				<AdditionSource>
+					<Item>Запросы</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗапросыУправлениеПоискомКонтекстноеМеню" id="35"/>
+				<ExtendedTooltip name="ЗапросыУправлениеПоискомРасширеннаяПодсказка" id="36"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="2391e7b8-7235-45d7-ab7e-6ff3dc086396">ЗапросыПередНачаломДобавления</Event>
+			</Events>
+			<ChildItems>
+				<CheckBoxField name="ЗапросыФлагВыбора" id="49">
+					<DataPath>Объект.Запросы.ФлагВыбора</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗапросыФлагВыбораКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="ЗапросыФлагВыбораРасширеннаяПодсказка" id="51"/>
+				</CheckBoxField>
+				<InputField name="ЗапросыИдентификатор" id="40">
+					<DataPath>Объект.Запросы.Идентификатор</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="ЗапросыИдентификаторКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="ЗапросыИдентификаторРасширеннаяПодсказка" id="42"/>
+				</InputField>
+				<InputField name="ЗапросыТекстЗапросаВыборкиРегистраторов" id="43">
+					<DataPath>Объект.Запросы.ТекстЗапросаВыборкиРегистраторов</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ChoiceButton>true</ChoiceButton>
+					<ContextMenu name="ЗапросыТекстЗапросаВыборкиРегистраторовКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ЗапросыТекстЗапросаВыборкиРегистраторовРасширеннаяПодсказка" id="45"/>
+					<Events>
+						<Event name="StartChoice">ЗапросыТекстЗапросаВыборкиРегистраторовНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="ЗапросыТекстЗапросаВыборкиДвижений" id="46">
+					<DataPath>Объект.Запросы.ТекстЗапросаВыборкиДвижений</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ChoiceButton>true</ChoiceButton>
+					<ContextMenu name="ЗапросыТекстЗапросаВыборкиДвиженийКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="ЗапросыТекстЗапросаВыборкиДвиженийРасширеннаяПодсказка" id="48"/>
+					<Events>
+						<Event name="StartChoice">ЗапросыТекстЗапросаВыборкиДвиженийНачалоВыбора</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.BlackBoxTestRegisterRecords</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="АдресЛогаПерепроведения" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес лога перепроведения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресВыгрузкиДвижений" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес выгрузки движений</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Запустить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Запустить</Action>
+		</Command>
+		<Command name="УстановитьПериод" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить период</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить период</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.SetDateInterval</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьПериод</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ЗагрузитьНастройки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.OpenFile</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗагрузитьНастройки</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="СохранитьНастройки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Write</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СохранитьНастройки</Action>
+			<Representation>Picture</Representation>
+		</Command>
+	</Commands>
+</Form>
